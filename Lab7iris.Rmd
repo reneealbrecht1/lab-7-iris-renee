@@ -1,0 +1,27 @@
+---
+title: "Lab7iris"
+author: "Madeline Gorchels and Renee Albrecht"
+date: "11/14/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#View(iris) Calling up the data frame
+library(tidyverse)
+
+
+```
+
+```{r}
+#make a basic graph
+
+iris_plot = ggplot(iris, aes(x = Petal.Length, y = Petal.Width))+
+  geom_point()
+
+iris_plot
+```
+
