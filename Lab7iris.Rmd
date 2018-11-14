@@ -20,8 +20,9 @@ library(tidyverse)
 #make a basic graph
 
 iris_plot = ggplot(iris, aes(x = Petal.Length, y = Petal.Width))+
-  geom_point(aes(color = "blue", shape = Species)) +
+  geom_point(aes(color = Species)) +
   labs(x = "Petal Length (mm)", y = "Petal Width (mm)") +
+  facet_wrap(~ Species)+
   theme_classic() #removed gridlines 
 
 iris_plot
